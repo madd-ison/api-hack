@@ -1,35 +1,44 @@
 'use strict';
 
-const searchUrl = 'https://api.edamam.com/search'
+/*const searchUrl = 'https://api.edamam.com/search'
 const searchEsp = 'https://test-es.edamam.com/search'
 const appKey = 
 'fd967e623643b511adeedd8cb6db33ec'	
 const appId = '8b12ba8f'
 
-const params = {
-    q: searchTerm,
-    r: returnInfo,
-    app_id: appId,
-    app_key: appKey,
+/* https://api.edamam.com/search?q=gochujang&q=rice&app_id=8b12ba8f&app_key=
+fd967e623643b511adeedd8cb6db33ec */
+
+$(document).ready(function(){
+  console.log("Waiting for user input!");
+  processEnInput()
+})
+
+function findRecipes(q){
+  fetch('https://api.edamam.com/search?q=' + q + '&app_id=8b12ba8f&app_key=fd967e623643b511adeedd8cb6db33ec')
+   .then(response => response.json())
+   .then(responseJson => {
+    displayRecipes(responseJson);
+  }).catch(error => alert("Sorry, something went wrong."))
 }
 
-function formatParams(){
-    
+
+function displayRecipes(responseJson){
+  responseJson.hits.forEach(hit => console.log(hit.recipe))
+  $('#results').empty();
+    for (let i = 0; i < responseJson.length; i++) {
+      $('#results').append(
+        `<p><a href="${responseJson.hits[i].recipe.url}">${responseJson.hits[i].recipe.label}</a></p>`
+      )
+    }
 }
 
-function getRecipes(){
 
-}
-
-function getEspanol(){
-
-}
-
-function displayRecipes(){
-
-}
-
-function processInput(){
-
+function processEnInput(){
+  $('#en-search').click(event=> {
+    event.preventDefault()
+    const q = $('#en-search-term').val()
+    findRecipes(q)
+  })
 }
 
