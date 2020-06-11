@@ -38,13 +38,19 @@ function findRecipes(q){
 
 
 function displayRecipes(responseJson, q){
-  responseJson.hits.forEach(hit => console.log(hit.recipe))
+  console.log(responseJson)
+  if (responseJson.more == false) {
+    $('#results').empty();
+    $('#results').append(`<p>Sorry, no results found. Try again!</p>`)
+  } else {
+    responseJson.hits.forEach(hit => console.log(hit.recipe))
   $('#results').empty();
     for (let i = 0; i < responseJson.hits.length; i++){
       $('#results').append(
         `<p><a href="${responseJson.hits[i].recipe.url}">${responseJson.hits[i].recipe.label}</a></p>`
       )
     }
+  }
 }
 
 
