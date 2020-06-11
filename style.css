@@ -1,0 +1,19 @@
+.search-box {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .english-search {
+    border: 1px solid blue;
+    width: 60%;
+  }
+  
+  .search-term {
+    width: 30px;
+  }
