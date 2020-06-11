@@ -9,14 +9,25 @@
 <body>
     <header></header>
     <div class="search-box">
-      <div class="english-search">
-        <form id="english-search">
-          <label for="en-search">Ingredients:</label>
+      <div class="english-search-box">
+
+        <section id="welcome">
+          <h4">I want to search:</h4>
+            <div id="buttons">
+              <button id="dishes">By Dish Name</button>
+              <button id="ingredients">By Ingredients</button>
+            </div>
+        </section>
+
+        <form id="english-search" class="hidden">
+          <label for="en-search" id="label"></label>
           <input type="text" name="search-term" id="en-search-term">
         <input type="submit" id="en-search" value="Search Recipes">
         </form>
+
       </div>
     </div>
+
     <section id="results">
     </section>
     

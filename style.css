@@ -1,4 +1,13 @@
-.search-box {
+.hidden {
+    display: none;
+  }
+  
+  #buttons {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .search-box {
     border: 1px solid black;
     display: flex;
     flex-direction: row;
@@ -9,11 +18,16 @@
     margin-right: auto;
   }
   
-  .english-search {
+  .english-search-box {
     border: 1px solid blue;
     width: 60%;
+    padding: 10px;
   }
   
-  .search-term {
-    width: 30px;
+  #en-search-term, #en-search {
+    margin: 10px;
+  }
+  
+  #results {
+    text-align: center;
   }
