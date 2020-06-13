@@ -1,33 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=VT323&display=swap');
+
+* {
+  letter-spacing: 2px;
+}
+
+body {
+  background: url(https://media.tenor.com/images/444fe535245a0a9165465834b0d9983e/tenor.png) fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  border: 3px solid rgb(165, 165, 238, .8);
+  background-color: rgb(165, 165, 238, .5);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1 {
+  font-family: 'VT323', monospace;
+  font-size: 70px;
+}
+
+header p {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  text-align: right;
+}
+
+.title {
+  width: 60%;
+}
+
+.intro {
+  width: 40%;
+  padding-top: 20px;
+}
+
 .hidden {
-    display: none;
-  }
-  
-  #buttons {
-    display: inline-block;
-    margin: 10px;
-  }
-  
-  .search-box {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    padding: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .english-search-box {
-    border: 1px solid blue;
+  display: none;
+}
+
+#buttons {
+  display: inline-block;
+  margin: 10px;
+}
+
+button, #en-search {
+  font-family: 'Permanent Marker', cursive;
+  background-color: bisque;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 10px 0 10px 0;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 2px;
+}
+
+.english-search-box {
+  border: 2px solid rgb(165, 165, 238, .8);
+  background-color: rgb(165, 165, 238, .8);
+  border-radius: 10px;
+  width: 70%;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 2px;
+}
+
+
+#en-search-term, #en-search {
+  margin: 10px;
+  background-color: bisque;
+}
+
+#results {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 2px;
+  font-size: 24px;
+  border-radius: 10px;
+  background: url(cork-board.png)
+}
+
+a:link {
+  color: #000;
+  font-weight: bold;
+}
+
+a:visited {
+  color: pink;
+}
+
+@media only screen and (min-width: 600px) {
+  header {
     width: 60%;
-    padding: 10px;
+    padding: 0 50px 0 50px;
   }
-  
-  #en-search-term, #en-search {
-    margin: 10px;
+  header h1 {
+    font-size: 80px;
   }
-  
+
+  .title {
+    width: 70%;
+  }
+
+  .intro {
+    width: 30%;
+    padding-top: 40px;
+  }
+
+  .english-search-box {
+    width: 50%;
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
   #results {
-    text-align: center;
+    width: 50%; 
   }
+}
