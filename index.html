@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API HACK</title>
+    <title>A Recipe App :)</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <header></header>
+    <header>
+      <div class="title">
+      <h1>YUMM!</h1>
+      </div>
+      <div class="intro">
+        <p>Helping you utilize what's in your kitchen.</p>
+      </div>
+    </header>
+
     <div class="search-box">
       <div class="english-search-box">
 
         <section id="welcome">
-          <h4>I want to search:</h4>
+          <h4>Search for recipes:</h4>
             <div id="buttons">
               <button id="dishes">By Dish Name</button>
               <button id="ingredients">By Ingredients</button>
             </div>
         </section>
-
         <form id="english-search" class="hidden">
           <label for="en-search" id="label"></label>
           <input type="text" name="search-term" id="en-search-term">
         <input type="submit" id="en-search" value="Search Recipes">
         </form>
-
+        <form id="back" class="hidden" action="https://workshop--maddisonm.repl.co/" method="get">
+        <button id="back-button">Back</button>
+        </form>
       </div>
     </div>
 
-    <section id="results">
+    <section id="results" class="hidden">
     </section>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" 
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
