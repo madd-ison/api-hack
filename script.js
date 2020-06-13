@@ -10,6 +10,7 @@ fd967e623643b511adeedd8cb6db33ec */
 
 $(document).ready(function(){
   console.log("Waiting for user input!");
+  $("body").hide(0).delay(400).fadeIn(3000)
   processEnInput()
   buttons()
 })
