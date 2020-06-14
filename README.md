@@ -33,6 +33,7 @@
 * Search for recipes by dish name
 * Search for recipes by list of ingredients
 * Results return preview image and recipe URL that opens in a new window
+* Contact form in case of any user questions or concerns
 
 ---
 
