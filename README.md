@@ -39,4 +39,4 @@
 
 ### Link to Live App:
 
-[YUMM] (https://madd-ison.github.io/yumm/)
+[YUMM](https://madd-ison.github.io/yumm/)
