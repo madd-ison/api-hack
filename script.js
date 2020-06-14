@@ -5,6 +5,7 @@ $(document).ready(function(){
   $("body").hide(0).delay(400).fadeIn(3000)
   processEnInput()
   buttons()
+  contactUs()
 })
 
 /* Welcome screen - guides and informs user to search by dish or ingredients */
@@ -44,6 +45,15 @@ function displayRecipes(responseJson, q){
         `<p><a href="${responseJson.hits[i].recipe.url}" target="_blank">${responseJson.hits[i].recipe.label}</a><br><img src="${responseJson.hits[i].recipe.image}" alt="recipe image" width="100px" height="100px"></p>`)  
     }
   }
+}
+
+function contactUs() {
+  $('#contact-btn').click(event => {
+    event.preventDefault()
+    $('#welcome').addClass('hidden')
+    $('#contact').removeClass('hidden')
+    $('#contact-btn').addClass('hidden')
+  })
 }
 
 /*English recipes - set up to be accompanied by a Spanish search when that API is no longer in Beta*/
