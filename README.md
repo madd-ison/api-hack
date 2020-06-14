@@ -6,8 +6,6 @@
 
 ### Screenshots
 
----
-
 #### Landing page:
 <img src="screenshots/landing-page.png">
 
