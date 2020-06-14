@@ -13,7 +13,7 @@
 <img src="screenshots/search.png" alt="search page">
 
 #### Search Results:
-<img src="screenshots/results-example.png alt="search results example">
+<img src="screenshots/results-example.png" alt="search results example">
 
 #### Contact Form:
 <img src="screenshots/contact-form.png" alt="contact form">
