@@ -1,8 +1,7 @@
 'use strict';
 
 $(document).ready(function(){
-  console.log("Waiting for user input!");
-  $("body").hide(0).delay(400).fadeIn(3000)
+  $('body').hide(0).delay(400).fadeIn(3000)
   processEnInput()
   buttons()
   contactUs()
@@ -27,7 +26,7 @@ function findRecipes(q){
    .then(response => response.json())
    .then(responseJson => {
     displayRecipes(responseJson)
-  }).catch(error => alert("Sorry, something went wrong."))
+  }).catch(error => alert(`Sorry, something went wrong.`))
 }
 
 
@@ -42,7 +41,7 @@ function displayRecipes(responseJson, q){
   $('#results').empty()
     for (let i = 0; i < responseJson.hits.length; i++){
       $('#results').append(
-        `<p><a href="${responseJson.hits[i].recipe.url}" target="_blank">${responseJson.hits[i].recipe.label}</a><br><img src="${responseJson.hits[i].recipe.image}" alt="recipe image" width="100px" height="100px"></p>`)  
+        `<p><a href='${responseJson.hits[i].recipe.url}' target='_blank'>${responseJson.hits[i].recipe.label}</a><br><img src='${responseJson.hits[i].recipe.image}' alt='recipe image' width='100px' height='100px'></p>`)  
     }
   }
 }
