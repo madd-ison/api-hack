@@ -4,10 +4,24 @@
   letter-spacing: 2px;
 }
 
+.hidden {
+  display: none;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 body {
   background: url(https://media.tenor.com/images/444fe535245a0a9165465834b0d9983e/tenor.png) fixed;
   background-repeat: repeat;
   background-size: contain;
+}
+
+#page-container {
+  margin: 0;
 }
 
 header {
@@ -20,6 +34,14 @@ header {
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
 }
 
 header h1 {
@@ -42,8 +64,12 @@ header p {
   padding-top: 20px;
 }
 
-.hidden {
-  display: none;
+#contact-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-top: 30px;
 }
 
 #buttons {
@@ -57,6 +83,10 @@ button, #en-search {
   border-radius: 10px;
   font-size: 14px;
   letter-spacing: 2px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .search-box {
@@ -110,6 +140,7 @@ a:link {
 a:visited {
   color: pink;
 }
+
 
 @media only screen and (min-width: 600px) {
   body {
