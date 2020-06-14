@@ -9,7 +9,7 @@
 ---
 
 #### Landing page:
-!(screenshots/landing-page.png)
+!(yumm/screenshots/landing-page.png)
 
 #### Search:
 
