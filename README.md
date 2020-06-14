@@ -9,13 +9,16 @@
 ---
 
 #### Landing page:
-!(yumm/screenshots/landing-page.png)
+<img src="screenshots/landing-page.png">
 
 #### Search:
+<img src="screenshots/search.png">
 
 #### Search Results:
+<img src="screenshots/results-example.png">
 
 #### Contact Form:
+<img src="screenshots/contact-form.png">
 
 ---
 
