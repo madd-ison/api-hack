@@ -47,6 +47,7 @@ function displayRecipes(responseJson, q){
   }
 }
 
+/* Replaces welcome screen with contact form */
 function contactUs() {
   $('#contact-btn').click(event => {
     event.preventDefault()
@@ -56,7 +57,7 @@ function contactUs() {
   })
 }
 
-/*English recipes - set up to be accompanied by a Spanish search when that API is no longer in Beta*/
+/* English recipes - set up to be accompanied by a Spanish search when that API is no longer in Beta */
 function processEnInput(){
   $('#en-search').click(event=> {
     event.preventDefault()
