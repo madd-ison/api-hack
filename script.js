@@ -1,13 +1,5 @@
 'use strict';
 
-/*const searchUrl = 'https://api.edamam.com/search'
-const searchEsp = 'https://test-es.edamam.com/search'
-const appKey = 
-'fd967e623643b511adeedd8cb6db33ec'	
-const appId = '8b12ba8f'
-/* https://api.edamam.com/search?q=gochujang&q=rice&app_id=8b12ba8f&app_key=
-fd967e623643b511adeedd8cb6db33ec */
-
 $(document).ready(function(){
   console.log("Waiting for user input!");
   $("body").hide(0).delay(400).fadeIn(3000)
@@ -15,6 +7,7 @@ $(document).ready(function(){
   buttons()
 })
 
+/* Welcome screen - guides and informs user to search by dish or ingredients */
 function buttons(){
   $('#ingredients').click(event => {
     $('#welcome').addClass('hidden')
@@ -38,7 +31,6 @@ function findRecipes(q){
 
 
 function displayRecipes(responseJson, q){
-  console.log(responseJson)
   if (responseJson.more == false) {
     $('#results').removeClass('hidden')
     $('#results').empty()
@@ -49,12 +41,12 @@ function displayRecipes(responseJson, q){
   $('#results').empty()
     for (let i = 0; i < responseJson.hits.length; i++){
       $('#results').append(
-        `<p><a href="${responseJson.hits[i].recipe.url}" target="_blank">${responseJson.hits[i].recipe.label}</a><p>`)  
+        `<p><a href="${responseJson.hits[i].recipe.url}" target="_blank">${responseJson.hits[i].recipe.label}</a><br><img src="${responseJson.hits[i].recipe.image}" alt="recipe image" width="100px" height="100px"></p>`)  
     }
-}
+  }
 }
 
-
+/*English recipes - set up to be accompanied by a Spanish search when that API is no longer in Beta*/
 function processEnInput(){
   $('#en-search').click(event=> {
     event.preventDefault()
