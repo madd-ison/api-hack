@@ -9,6 +9,7 @@
 ---
 
 #### Landing page:
+!(screenshots/landing-page.png)
 
 #### Search:
 
