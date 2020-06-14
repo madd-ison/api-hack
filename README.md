@@ -7,16 +7,16 @@
 ### Screenshots
 
 #### Landing page:
-<img src="screenshots/landing-page.png">
+<img src="screenshots/landing-page.png" alt="landing page">
 
 #### Search:
-<img src="screenshots/search.png">
+<img src="screenshots/search.png" alt="search page">
 
 #### Search Results:
-<img src="screenshots/results-example.png">
+<img src="screenshots/results-example.png alt="search results example">
 
 #### Contact Form:
-<img src="screenshots/contact-form.png">
+<img src="screenshots/contact-form.png" alt="contact form">
 
 ---
 
