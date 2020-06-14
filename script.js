@@ -64,6 +64,6 @@ function processEnInput(){
     const q = $('#en-search-term').val()
     findRecipes(q)
     $('#back').removeClass('hidden')
-    $('#contact-btn).addClass('hidden')
+    $('#contact-btn').addClass('hidden')
   })
 }
