@@ -1,10 +1,12 @@
 'use strict';
 
+const appKey ='fd967e623643b511adeedd8cb6db33ec'
+const appId = '8b12ba8f'
+const searchUrl = 'https://api.edamam.com/search'
+
 $(document).ready(function(){
-  $('body').hide(0).delay(400).fadeIn(3000)
-  processEnInput()
-  buttons()
-  contactUs()
+  console.log("Waiting for user input!");
+  $("body").hide(0).delay(400).fadeIn(3000)
 })
 
 /* Welcome screen - guides and informs user to search by dish or ingredients */
@@ -21,13 +23,33 @@ function buttons(){
   })
 }
 
-function findRecipes(q){
-  fetch('https://api.edamam.com/search?q=' + q + '&app_id=8b12ba8f&app_key=fd967e623643b511adeedd8cb6db33ec')
-   .then(response => response.json())
-   .then(responseJson => {
-    displayRecipes(responseJson)
-  }).catch(error => alert(`Sorry, something went wrong.`))
+function formatQueryParams(params) {
+  const queryItems = Object.keys(params)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+  return queryItems.join('&')
 }
+
+function findRecipes(q){
+  const params = {
+    q: $('#en-search-term').val(),
+    app_id: appId,
+    app_key: appKey
+  }
+
+   const queryString = formatQueryParams(params)
+   const url = searchUrl + '?' + queryString
+
+  console.log(url)
+
+   fetch(url) 
+   .then(response => {
+       if (response.ok) {
+        return response.json()
+      }
+      throw new Error(response.statusText)
+    })
+    .then(responseJson => displayRecipes(responseJson))
+    .catch(err => alert("Sorry, something went wrong."))}
 
 
 function displayRecipes(responseJson, q){
@@ -60,9 +82,12 @@ function contactUs() {
 function processEnInput(){
   $('#en-search').click(event=> {
     event.preventDefault()
-    const q = $('#en-search-term').val()
     findRecipes(q)
     $('#back').removeClass('hidden')
     $('#contact-btn').addClass('hidden')
   })
 }
+
+$(processEnInput)
+$(contactUs)
+$(buttons)
