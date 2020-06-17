@@ -12,12 +12,12 @@ function buttons(){
   $('#ingredients').click(event => {
     $('#welcome').addClass('hidden')
     $('#english-search').removeClass('hidden')
-    $('#label').text(`What ingredients would you like to use?`)
+    $('#label').text(`What ingredients would you like to use? (i.e. 'gochujang, rice, eggs') `)
   })
   $('#dishes').click(event => {
     $('#welcome').addClass('hidden')
     $('#english-search').removeClass('hidden')
-    $('#label').text(`What are we cooking?`)
+    $('#label').text(`What are we cooking? (i.e. 'bulgogi' or 'carbonara')`)
   })
 }
 
