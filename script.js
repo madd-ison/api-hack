@@ -82,6 +82,7 @@ function contactUs() {
 function processEnInput(){
   $('#en-search').click(event=> {
     event.preventDefault()
+    const q = $('#en-search-term').val()
     findRecipes(q)
     $('#back').removeClass('hidden')
     $('#contact-btn').addClass('hidden')
