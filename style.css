@@ -66,7 +66,7 @@ header p {
   padding-top: 20px;
 }
 
-#contact-us {
+#contact {
   display: flex;
   flex-direction: row;
   justify-content: center;
