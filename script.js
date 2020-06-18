@@ -7,6 +7,7 @@ const searchUrl = 'https://api.edamam.com/search'
 $(document).ready(function(){
   console.log("Waiting for user input!");
   $("body").hide(0).delay(400).fadeIn(3000)
+  $(contactUs)
 })
 
 /* Welcome screen - guides and informs user to search by dish or ingredients */
@@ -90,5 +91,4 @@ function processEnInput(){
 }
 
 $(processEnInput)
-$(contactUs)
 $(buttons)
