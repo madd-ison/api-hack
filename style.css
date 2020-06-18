@@ -16,8 +16,8 @@ html, body {
 
 body {
   background: url(https://media.tenor.com/images/444fe535245a0a9165465834b0d9983e/tenor.png) fixed;
-  background-repeat: repeat;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #page-container {
@@ -144,13 +144,6 @@ a:visited {
   color: pink;
 }
 
-
-@media only screen and (min-width: 600px) {
-  body {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 
 @media only screen and (min-width: 800px) {
   header {
