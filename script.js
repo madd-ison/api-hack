@@ -50,7 +50,8 @@ function findRecipes(q){
       throw new Error(response.statusText)
     })
     .then(responseJson => displayRecipes(responseJson))
-    .catch(err => alert("Sorry, something went wrong."))}
+    .catch(err => console.log(err))
+   }
 
 
 function displayRecipes(responseJson, q){
