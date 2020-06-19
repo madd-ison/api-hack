@@ -15,12 +15,12 @@ function buttons(){
   $('#ingredients').click(event => {
     $('#welcome').addClass('hidden')
     $('#recipe-search').removeClass('hidden')
-    $('#recipe-search').prepend(`<p>What ingredients would you like to use? (i.e. 'gochujang, rice, eggs</p>') `)
+    $('#recipe-search').prepend(`<p>What ingredients would you like to use? (i.e. 'gochujang, rice')</p>`)
   })
   $('#dishes').click(event => {
     $('#welcome').addClass('hidden')
     $('#recipe-search').removeClass('hidden')
-    $('#recipe-search').prepend(`<p>What are we cooking? (i.e. 'bulgogi,' 'carbonara,' 'muffins')</p>`)
+    $('#recipe-search').prepend(`<p>What are we cooking? (i.e. 'carbonara')</p>`)
   })
 }
 
