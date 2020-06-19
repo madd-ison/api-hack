@@ -14,13 +14,13 @@ $(document).ready(function(){
 function buttons(){
   $('#ingredients').click(event => {
     $('#welcome').addClass('hidden')
-    $('#english-search').removeClass('hidden')
-    $('#label').text(`What ingredients would you like to use? (i.e. 'gochujang, rice, eggs') `)
+    $('#recipe-search').removeClass('hidden')
+    $('#recipe-search').prepend(`<p>What ingredients would you like to use? (i.e. 'gochujang, rice, eggs</p>') `)
   })
   $('#dishes').click(event => {
     $('#welcome').addClass('hidden')
-    $('#english-search').removeClass('hidden')
-    $('#label').text(`What are we cooking? (i.e. 'bulgogi' or 'carbonara')`)
+    $('#recipe-search').removeClass('hidden')
+    $('#recipe-search').prepend(`<p>What are we cooking? (i.e. 'bulgogi' or 'carbonara</p>')`)
   })
 }
 
@@ -32,7 +32,7 @@ function formatQueryParams(params) {
 
 function findRecipes(q){
   const params = {
-    q: $('#en-search-term').val(),
+    q: $('#recipe-search-term').val(),
     app_id: appId,
     app_key: appKey
   }
@@ -81,9 +81,9 @@ function contactUs() {
 
 /* English recipes - set up to be accompanied by a Spanish search when that API is no longer in Beta */
 function processEnInput(){
-  $('#en-search').click(event=> {
+  $('#search-recipes').click(event=> {
     event.preventDefault()
-    const q = $('#en-search-term').val()
+    const q = $('#recipe-search-term').val()
     findRecipes(q)
     $('#back').removeClass('hidden')
     $('#contact-btn').addClass('hidden')
