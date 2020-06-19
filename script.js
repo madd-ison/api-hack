@@ -20,7 +20,7 @@ function buttons(){
   $('#dishes').click(event => {
     $('#welcome').addClass('hidden')
     $('#recipe-search').removeClass('hidden')
-    $('#recipe-search').prepend(`<p>What are we cooking? (i.e. 'bulgogi' or 'carbonara</p>')`)
+    $('#recipe-search').prepend(`<p>What are we cooking? (i.e. 'bulgogi,' 'carbonara,' 'muffins')</p>`)
   })
 }
 
