@@ -79,7 +79,7 @@ header p {
   margin: 10px;
 }
 
-button, #en-search {
+button, #search-recipes {
   font-family: 'Permanent Marker', cursive;
   background-color: bisque;
   border-radius: 10px;
@@ -115,7 +115,7 @@ button:hover {
 }
 
 
-#en-search-term, #en-search {
+#recipe-search-term, #search-recipes {
   margin: 10px;
   background-color: bisque;
 }
